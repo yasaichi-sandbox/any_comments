@@ -1,7 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: Nanami Hashimoto
+  email: nanami.hashimoto@nogizaka46.com
 
 two:
-  name: MyString
+  name: Yurina Hirate
+  email: yurina.hirate@keyakizaka46.com
