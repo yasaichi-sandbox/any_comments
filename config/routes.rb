@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root to: 'home#index'
   devise_for :users
   resources :users, only: :show do
-    resources :posts, only: %i(index show), module: :users
+    resources :posts, only: %i(index show), module: :users do
+      resources :comments, only: %i(create), controller: :post_comments
+    end
   end
 end

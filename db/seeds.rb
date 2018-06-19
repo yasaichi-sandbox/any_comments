@@ -11,5 +11,10 @@ user = User.create!(
   email: "nanami.hashimoto@nogizaka46.com",
   password: "password"
 )
-
 user.posts.create!(title: "ねこかいたい", body: "本文")
+
+test_user = User.create!(
+  name: "Taro Yamada",
+  email: "test@example.com",
+  password: "password"
+)
