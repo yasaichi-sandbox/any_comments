@@ -4,7 +4,8 @@ class Users::PostsController < ApplicationController
   end
 
   def show
-    @post = user_posts.find(params[:id])
+    @post = user_posts.preload(comments: :user).find(params[:id])
+    @new_comment = PostComment.new
   end
 
   private

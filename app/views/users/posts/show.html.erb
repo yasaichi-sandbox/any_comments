@@ -8,4 +8,11 @@
   <%= @post.body %>
 </p>
 
+<%= render 'shared/comment/form',
+      comment: @new_comment,
+      url: user_post_comments_path(@post.user, @post)
+%>
+
+<%= render 'shared/comment/list', comments: @post.comments %>
+
 <%= link_to 'Back', user_posts_path(@post.user) %>
